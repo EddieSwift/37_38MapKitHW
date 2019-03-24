@@ -11,8 +11,10 @@
 		2CFAECB8224778F3001CDA4F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFAECB7224778F3001CDA4F /* ViewController.m */; };
 		2CFAECBB224778F3001CDA4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CFAECB9224778F3001CDA4F /* Main.storyboard */; };
 		2CFAECBD224778F4001CDA4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CFAECBC224778F4001CDA4F /* Assets.xcassets */; };
-		2CFAECC0224778F4001CDA4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CFAECBE224778F4001CDA4F /* LaunchScreen.storyboard */; };
 		2CFAECC3224778F4001CDA4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFAECC2224778F4001CDA4F /* main.m */; };
+		2CFAECCB22477B74001CDA4F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFAECCA22477B74001CDA4F /* MapKit.framework */; };
+		2CFAECCD22477BA5001CDA4F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CFAECCC22477BA5001CDA4F /* Launch Screen.storyboard */; };
+		2CFAECEB22478D10001CDA4F /* location_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CFAECEA22478D10001CDA4F /* location_arrow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +25,12 @@
 		2CFAECB7224778F3001CDA4F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2CFAECBA224778F3001CDA4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CFAECBC224778F4001CDA4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2CFAECBF224778F4001CDA4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CFAECC1224778F4001CDA4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CFAECC2224778F4001CDA4F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2CFAECCA22477B74001CDA4F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2CFAECCC22477BA5001CDA4F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		2CFAECD722478774001CDA4F /* TelAviv.gpx */ = {isa = PBXFileReference; lastKnownFileType = text; name = TelAviv.gpx; path = 37_38MapKitHW/TelAviv.gpx; sourceTree = "<group>"; };
+		2CFAECEA22478D10001CDA4F /* location_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_arrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CFAECCB22477B74001CDA4F /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +48,10 @@
 		2CFAECA7224778F2001CDA4F = {
 			isa = PBXGroup;
 			children = (
+				2CFAECD722478774001CDA4F /* TelAviv.gpx */,
 				2CFAECB2224778F3001CDA4F /* 37_38MapKitHW */,
 				2CFAECB1224778F3001CDA4F /* Products */,
+				2CFAECC922477B74001CDA4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,12 +71,29 @@
 				2CFAECB6224778F3001CDA4F /* ViewController.h */,
 				2CFAECB7224778F3001CDA4F /* ViewController.m */,
 				2CFAECB9224778F3001CDA4F /* Main.storyboard */,
+				2CFAECD62247875B001CDA4F /* Images */,
 				2CFAECBC224778F4001CDA4F /* Assets.xcassets */,
-				2CFAECBE224778F4001CDA4F /* LaunchScreen.storyboard */,
 				2CFAECC1224778F4001CDA4F /* Info.plist */,
 				2CFAECC2224778F4001CDA4F /* main.m */,
+				2CFAECCC22477BA5001CDA4F /* Launch Screen.storyboard */,
 			);
 			path = 37_38MapKitHW;
+			sourceTree = "<group>";
+		};
+		2CFAECC922477B74001CDA4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CFAECCA22477B74001CDA4F /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2CFAECD62247875B001CDA4F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2CFAECEA22478D10001CDA4F /* location_arrow.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +127,14 @@
 				TargetAttributes = {
 					2CFAECAF224778F3001CDA4F = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -128,7 +161,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CFAECC0224778F4001CDA4F /* LaunchScreen.storyboard in Resources */,
+				2CFAECEB22478D10001CDA4F /* location_arrow.png in Resources */,
+				2CFAECCD22477BA5001CDA4F /* Launch Screen.storyboard in Resources */,
 				2CFAECBD224778F4001CDA4F /* Assets.xcassets in Resources */,
 				2CFAECBB224778F3001CDA4F /* Main.storyboard in Resources */,
 			);
@@ -156,14 +190,6 @@
 				2CFAECBA224778F3001CDA4F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2CFAECBE224778F4001CDA4F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2CFAECBF224778F4001CDA4F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
