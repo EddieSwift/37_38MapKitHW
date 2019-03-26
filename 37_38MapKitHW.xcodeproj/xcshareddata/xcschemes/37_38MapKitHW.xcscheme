@@ -64,7 +64,7 @@
       <AdditionalOptions>
       </AdditionalOptions>
       <LocationScenarioReference
-         identifier = "../../37_38MapKitHW/TelAviv.gpx"
+         identifier = "../../37_38MapKitHW/Location/TelAviv.gpx"
          referenceType = "0">
       </LocationScenarioReference>
    </LaunchAction>
