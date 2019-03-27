@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C2BD65C224AC22300D9F9DB /* EGBPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BD65B224AC22300D9F9DB /* EGBPopover.m */; };
 		2C688F9D224A802F00CCBE09 /* EGBStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C688F9C224A802F00CCBE09 /* EGBStudent.m */; };
 		2C688FA0224A82D900CCBE09 /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C688F9F224A82D900CCBE09 /* MapAnnotation.m */; };
 		2C688FA3224A839000CCBE09 /* UIView+MKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C688FA2224A839000CCBE09 /* UIView+MKAnnotationView.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C2BD65A224AC22300D9F9DB /* EGBPopover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGBPopover.h; sourceTree = "<group>"; };
+		2C2BD65B224AC22300D9F9DB /* EGBPopover.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGBPopover.m; sourceTree = "<group>"; };
 		2C688F9B224A802F00CCBE09 /* EGBStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGBStudent.h; sourceTree = "<group>"; };
 		2C688F9C224A802F00CCBE09 /* EGBStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGBStudent.m; sourceTree = "<group>"; };
 		2C688F9E224A82D900CCBE09 /* MapAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				2C688F9F224A82D900CCBE09 /* MapAnnotation.m */,
 				2C688FA1224A839000CCBE09 /* UIView+MKAnnotationView.h */,
 				2C688FA2224A839000CCBE09 /* UIView+MKAnnotationView.m */,
+				2C2BD65A224AC22300D9F9DB /* EGBPopover.h */,
+				2C2BD65B224AC22300D9F9DB /* EGBPopover.m */,
 				2CFAECB9224778F3001CDA4F /* Main.storyboard */,
 				2CFAECD62247875B001CDA4F /* Images */,
 				2CFAECBC224778F4001CDA4F /* Assets.xcassets */,
@@ -211,6 +216,7 @@
 				2C688FA3224A839000CCBE09 /* UIView+MKAnnotationView.m in Sources */,
 				2CFAECC3224778F4001CDA4F /* main.m in Sources */,
 				2CFAECB5224778F3001CDA4F /* AppDelegate.m in Sources */,
+				2C2BD65C224AC22300D9F9DB /* EGBPopover.m in Sources */,
 				2C688FA0224A82D900CCBE09 /* MapAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

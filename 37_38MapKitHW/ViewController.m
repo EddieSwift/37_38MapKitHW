@@ -10,6 +10,7 @@
 #import "MapAnnotation.h"
 #import "UIView+MKAnnotationView.h"
 #import "EGBStudent.h"
+#import "EGBPopover.h"
 
 
 @interface ViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
@@ -18,6 +19,8 @@
 @property (strong, nonatomic) MKDirections *directions;
 @property (strong, nonatomic) NSArray *allStudents;
 @property (strong, nonatomic) NSArray *allStudentAnnotations;
+@property (strong, nonatomic) NSString *studentAddress;
+@property (strong, nonatomic) NSArray *studentArrayPopover;
 
 @end
 
@@ -25,12 +28,12 @@
 
 static double latitudes[] = {
     
-    32.070357, 32.107043, 32.085533, 32.0665637, 32.0638462, 32.056664, 32.0549635, 32.095441, 32.092299, 32.087381
+    32.070357, 32.107043, 32.070533, 32.0665637, 32.0638462, 32.056664, 32.0549635, 32.095441, 32.092299,  32.070913, 32.086756, 32.105884, 32.089254, 32.079963, 32.094200, 32.079014, 32.059632, 32.048953, 32.077102, 32.045643
 };
 
 static double longitudes[] = {
     
-    34.7809829, 34.8044052, 34.775875, 34.7842366, 34.773168, 34.779869, 34.7692812, 34.777240, 34.782435, 34.782762
+    34.7809829, 34.8044052, 34.767777, 34.7842366, 34.773168, 34.779869, 34.7692812, 34.777240, 34.782435, 34.839005, 34.827558, 34.832626, 34.885517, 34.884136, 34.899509, 34.898396, 34.859574, 34.814088, 34.895852, 34.776931
 };
 
 - (void)viewDidLoad {
@@ -81,7 +84,7 @@ static double longitudes[] = {
     
     NSMutableArray *array = [NSMutableArray array];
     
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 20; i++) {
         
         EGBStudent *student = [EGBStudent randomStudent];
         student.location = CLLocationCoordinate2DMake(latitudes[i], longitudes[i]);
@@ -180,7 +183,7 @@ static double longitudes[] = {
         }
         
         pin.canShowCallout = YES;
-        pin.draggable = YES;
+//        pin.draggable = YES;
         
         UIButton *descriptionButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         [descriptionButton addTarget:self action:@selector(actionDescription:) forControlEvents:UIControlEventTouchUpInside];
@@ -198,16 +201,16 @@ static double longitudes[] = {
     return pin;
 }
 
-- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view didChangeDragState:(MKAnnotationViewDragState)newState fromOldState:(MKAnnotationViewDragState)oldState {
-    
-    if (newState == MKAnnotationViewDragStateEnding) {
-        
-        CLLocationCoordinate2D location = view.annotation.coordinate;
-        MKMapPoint point = MKMapPointForCoordinate(location);
-        
-        NSLog(@"\nlocation: {%f, %f},\npoint = %@", location.longitude, location.latitude, MKStringFromMapPoint(point));
-    }
-}
+//- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view didChangeDragState:(MKAnnotationViewDragState)newState fromOldState:(MKAnnotationViewDragState)oldState {
+//    
+//    if (newState == MKAnnotationViewDragStateEnding) {
+//        
+//        CLLocationCoordinate2D location = view.annotation.coordinate;
+//        MKMapPoint point = MKMapPointForCoordinate(location);
+//        
+//        NSLog(@"\nlocation: {%f, %f},\npoint = %@", location.longitude, location.latitude, MKStringFromMapPoint(point));
+//    }
+//}
 
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay {
     
@@ -239,6 +242,8 @@ static double longitudes[] = {
 #pragma mark - Actions for Objects on the Map
 
 - (void) actionDescription:(UIButton*) sender {
+    
+    NSMutableArray *studentArrayPopover = [NSMutableArray array];
 
     MKAnnotationView *annotationView = [sender superAnnotationView];
 
@@ -259,7 +264,13 @@ static double longitudes[] = {
     for (EGBStudent *student in self.allStudents) {
         
         if (student.location.latitude == coordinate.latitude && student.location.longitude == coordinate.longitude) {
+            
             studentInfo = [NSString stringWithFormat:@"Name: %@,\n Surname: %@,\n Year of Birth: %ld,\n Gender: %@", student.firstName, student.lastName, student.yearOfBirth, student.gender];
+            
+            [studentArrayPopover addObject:student.firstName];
+            [studentArrayPopover addObject:student.lastName];
+            [studentArrayPopover addObject:[NSString stringWithFormat:@"%ld", student.yearOfBirth]];
+            [studentArrayPopover addObject:student.gender];
         }
     }
     
@@ -279,13 +290,25 @@ static double longitudes[] = {
 
                 message = [NSString stringWithFormat:@"City: %@,\n Country: %@,\n CountryCode: %@,\n Street: %@,\n Name: %@,\n State: %@", placeMark.locality, placeMark.country, placeMark.ISOcountryCode, placeMark.thoroughfare, placeMark.name, placeMark.administrativeArea];
                 
+                [studentArrayPopover addObject:placeMark.country];
+                [studentArrayPopover addObject:placeMark.locality];
+                [studentArrayPopover addObject:placeMark.thoroughfare];
+                
             } else {
 
                 message = @"No Placemarks Found";
             }
         }
-
-        [self showAlertWithTitle:@"Location" andMessage:[NSString stringWithFormat:@"%@,\n Address: %@", studentInfo, message]];
+        
+        EGBPopover *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"EGBPopover"];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        nav.preferredContentSize = CGSizeMake(400, 400);
+        nav.modalPresentationStyle                   = UIModalPresentationPopover;
+        nav.popoverPresentationController.sourceView = self.view;
+        nav.popoverPresentationController.sourceRect = sender.frame;
+        [self presentViewController:nav animated:YES completion:nil];
+        [vc transferStudentInfoToPopover:studentArrayPopover];
+        
     }];
 }
 
