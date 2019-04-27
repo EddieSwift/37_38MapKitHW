@@ -15,6 +15,12 @@
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UILabel *threeDistanceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fiveDistanceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *sevenDistanceLabel;
+
+
+
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *location;
 

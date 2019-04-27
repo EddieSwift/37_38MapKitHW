@@ -13,6 +13,12 @@
 		2C688FA3224A839000CCBE09 /* UIView+MKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C688FA2224A839000CCBE09 /* UIView+MKAnnotationView.m */; };
 		2C688FAA224AA80700CCBE09 /* male.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C688FA8224AA80700CCBE09 /* male.png */; };
 		2C688FAD224AA88600CCBE09 /* female.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C688FAC224AA88600CCBE09 /* female.png */; };
+		2CCDB45E226E06F90020BD94 /* MeetingPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCDB45D226E06F90020BD94 /* MeetingPointAnnotation.m */; };
+		2CCDB461226E380A0020BD94 /* UIView+MKMeetPointAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCDB460226E380A0020BD94 /* UIView+MKMeetPointAnnotationView.m */; };
+		2CCDB463226E40330020BD94 /* chocolate_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CCDB462226E40330020BD94 /* chocolate_bar.png */; };
+		2CCDB46522745A910020BD94 /* iconfinder_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CCDB46422745A910020BD94 /* iconfinder_64.png */; };
+		2CCDB46722745C3A0020BD94 /* iconfinder_on_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CCDB46622745C3A0020BD94 /* iconfinder_on_map.png */; };
+		2CCDB46922745C980020BD94 /* iconfinder_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CCDB46822745C980020BD94 /* iconfinder_24.png */; };
 		2CFAECB5224778F3001CDA4F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFAECB4224778F3001CDA4F /* AppDelegate.m */; };
 		2CFAECB8224778F3001CDA4F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFAECB7224778F3001CDA4F /* ViewController.m */; };
 		2CFAECBB224778F3001CDA4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CFAECB9224778F3001CDA4F /* Main.storyboard */; };
@@ -34,6 +40,14 @@
 		2C688FA2224A839000CCBE09 /* UIView+MKAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+MKAnnotationView.m"; sourceTree = "<group>"; };
 		2C688FA8224AA80700CCBE09 /* male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male.png; sourceTree = "<group>"; };
 		2C688FAC224AA88600CCBE09 /* female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = female.png; sourceTree = "<group>"; };
+		2CCDB45C226E06F90020BD94 /* MeetingPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetingPointAnnotation.h; sourceTree = "<group>"; };
+		2CCDB45D226E06F90020BD94 /* MeetingPointAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetingPointAnnotation.m; sourceTree = "<group>"; };
+		2CCDB45F226E380A0020BD94 /* UIView+MKMeetPointAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+MKMeetPointAnnotationView.h"; sourceTree = "<group>"; };
+		2CCDB460226E380A0020BD94 /* UIView+MKMeetPointAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+MKMeetPointAnnotationView.m"; sourceTree = "<group>"; };
+		2CCDB462226E40330020BD94 /* chocolate_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chocolate_bar.png; sourceTree = "<group>"; };
+		2CCDB46422745A910020BD94 /* iconfinder_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconfinder_64.png; sourceTree = "<group>"; };
+		2CCDB46622745C3A0020BD94 /* iconfinder_on_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconfinder_on_map.png; sourceTree = "<group>"; };
+		2CCDB46822745C980020BD94 /* iconfinder_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconfinder_24.png; sourceTree = "<group>"; };
 		2CFAECB0224778F3001CDA4F /* 37_38MapKitHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 37_38MapKitHW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CFAECB3224778F3001CDA4F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2CFAECB4224778F3001CDA4F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -97,6 +111,10 @@
 				2CFAECB7224778F3001CDA4F /* ViewController.m */,
 				2C688F9E224A82D900CCBE09 /* MapAnnotation.h */,
 				2C688F9F224A82D900CCBE09 /* MapAnnotation.m */,
+				2CCDB45C226E06F90020BD94 /* MeetingPointAnnotation.h */,
+				2CCDB45D226E06F90020BD94 /* MeetingPointAnnotation.m */,
+				2CCDB45F226E380A0020BD94 /* UIView+MKMeetPointAnnotationView.h */,
+				2CCDB460226E380A0020BD94 /* UIView+MKMeetPointAnnotationView.m */,
 				2C688FA1224A839000CCBE09 /* UIView+MKAnnotationView.h */,
 				2C688FA2224A839000CCBE09 /* UIView+MKAnnotationView.m */,
 				2C2BD65A224AC22300D9F9DB /* EGBPopover.h */,
@@ -123,6 +141,10 @@
 		2CFAECD62247875B001CDA4F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2CCDB46422745A910020BD94 /* iconfinder_64.png */,
+				2CCDB46822745C980020BD94 /* iconfinder_24.png */,
+				2CCDB462226E40330020BD94 /* chocolate_bar.png */,
+				2CCDB46622745C3A0020BD94 /* iconfinder_on_map.png */,
 				2C688FA8224AA80700CCBE09 /* male.png */,
 				2C688FAC224AA88600CCBE09 /* female.png */,
 				2CFAECEA22478D10001CDA4F /* location_arrow.png */,
@@ -195,11 +217,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CCDB46722745C3A0020BD94 /* iconfinder_on_map.png in Resources */,
 				2CFAECEB22478D10001CDA4F /* location_arrow.png in Resources */,
 				2CFAECCD22477BA5001CDA4F /* Launch Screen.storyboard in Resources */,
 				2CFAECBD224778F4001CDA4F /* Assets.xcassets in Resources */,
+				2CCDB463226E40330020BD94 /* chocolate_bar.png in Resources */,
 				2C688FAA224AA80700CCBE09 /* male.png in Resources */,
+				2CCDB46922745C980020BD94 /* iconfinder_24.png in Resources */,
 				2CFAECBB224778F3001CDA4F /* Main.storyboard in Resources */,
+				2CCDB46522745A910020BD94 /* iconfinder_64.png in Resources */,
 				2C688FAD224AA88600CCBE09 /* female.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,10 +238,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C688F9D224A802F00CCBE09 /* EGBStudent.m in Sources */,
+				2CCDB45E226E06F90020BD94 /* MeetingPointAnnotation.m in Sources */,
 				2CFAECB8224778F3001CDA4F /* ViewController.m in Sources */,
 				2C688FA3224A839000CCBE09 /* UIView+MKAnnotationView.m in Sources */,
 				2CFAECC3224778F4001CDA4F /* main.m in Sources */,
 				2CFAECB5224778F3001CDA4F /* AppDelegate.m in Sources */,
+				2CCDB461226E380A0020BD94 /* UIView+MKMeetPointAnnotationView.m in Sources */,
 				2C2BD65C224AC22300D9F9DB /* EGBPopover.m in Sources */,
 				2C688FA0224A82D900CCBE09 /* MapAnnotation.m in Sources */,
 			);
